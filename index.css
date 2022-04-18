@@ -1,0 +1,48 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.cuerpo {
+    margin: 0 100px 0 100px;
+}
+
+.cuerpo h1 {
+    text-align: center;
+    margin: 2px 0 2px 0;
+}
+
+.cards {
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card {
+    width: 250px;
+    margin: 15px 50px 15px 50px;
+    -webkit-box-shadow: 6px 6px 19px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 6px 19px -4px rgba(0,0,0,0.75);
+box-shadow: 6px 6px 19px -4px rgba(0,0,0,0.75);
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.btn a {
+    text-decoration: none;
+    color: black;
+}
