@@ -40,32 +40,42 @@ $api = json_decode($response,true);
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROVGAz_bMma7Xc6od4CvojOmucnXvQyVrg5Q&usqp=CAU" alt="" width="30" height="30" class="d-inline-block align-text-top">
       Rick and Morty API
     </a>
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Buscar</button>
+    </form>
   </div>
 </nav>
 
-<form class="cuerpo">
+<div class="cuerpo">
 
   <h1>Rick and Morty</h1>
  
+  <form action="./detalle.php" method="post">
+
   <div class="cards">
 
  <?php
     foreach ($api['results'] as $key => $value) {
+      $id = $value['id'];
       $name = $value['name'];
       $episode = $value['episode'];
       $air_date = $value['air_date'];
+      $created = $value['created'];
+      $url = $value['url'];
   ?>
- 
-  
+   
     <div class="card">
+      <h4><?php echo $id ?></h4>
       <img class="imagen" src="https://es.web.img3.acsta.net/pictures/18/10/31/17/34/2348073.jpg">
       <div class="card-body">
         <h4 class="card-title"><?php echo $name ?></h4>
         <h6 class="card-text"><?php echo $episode ?></h6>
         <h6 class="card-text"><?php echo $air_date ?></h6>
-        <div class="btn">
-          <a href="#">DETALLE</a>
-        </div>
+        <h6><?php echo $created ?></h6>
+
+        <input style= "display: none;" name="url" value="<?php echo $url ?>">
+        <button type="submit" class="btn btn-primary">Detalle</button>
       </div>
     </div>
   
@@ -73,7 +83,11 @@ $api = json_decode($response,true);
     }
   ?>
 
+  </div>
+
   </form>
+
+  <footer> © Created by Santiago Gil Ramirez | 2022</footer>
 
 </body>
 </html>

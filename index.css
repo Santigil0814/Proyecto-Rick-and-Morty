@@ -1,13 +1,15 @@
 * {
     margin: 0%;
     padding: 0%;
-}
-
-.cuerpo {
-    margin: 0 100px 0 100px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .cuerpo h1 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.titulo {
     text-align: center;
     margin: 2px 0 2px 0;
 }
@@ -34,15 +36,15 @@
 box-shadow: 6px 6px 19px -4px rgba(0,0,0,0.75);
 }
 
-.btn {
+.cajon {
+    display: none;
+}
+
+footer {
+    background-color: #F8F9FA;
     display: flex;
     justify-content: center;
     justify-items: center;
-    cursor: pointer;
-    border: 1px solid black;
-}
-
-.btn a {
-    text-decoration: none;
-    color: black;
+    padding: 15px;
+    margin-top: 10px;
 }
