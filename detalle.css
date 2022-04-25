@@ -1,0 +1,38 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.img-fluid {
+  height: 400px;
+  width: 200px;
+}
+
+.cont-detail {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  width: 25vw;
+  padding: 10px;
+}
+
+.cards {
+  margin: 0%;
+  padding: 0%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+}
+
+footer {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  padding: 15px;
+  margin-top: 10px;
+}
