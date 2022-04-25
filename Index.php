@@ -66,13 +66,11 @@ $api = json_decode($response,true);
   ?>
    
     <div class="card">
-      <h4><?php echo $id ?></h4>
       <img class="imagen" src="https://es.web.img3.acsta.net/pictures/18/10/31/17/34/2348073.jpg">
       <div class="card-body">
         <h4 class="card-title"><?php echo $name ?></h4>
         <h6 class="card-text"><?php echo $episode ?></h6>
         <h6 class="card-text"><?php echo $air_date ?></h6>
-        <h6><?php echo $created ?></h6>
 
         <input style= "display: none;" name="url" value="<?php echo $url ?>">
         <button type="submit" class="btn btn-primary">Detalle</button>
