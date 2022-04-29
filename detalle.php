@@ -36,27 +36,42 @@ $api = json_decode($response,true);
 
 <div class="conte">
 
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.php">
+  <a class="navbar-brand" href="index.php">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROVGAz_bMma7Xc6od4CvojOmucnXvQyVrg5Q&usqp=CAU" alt="" width="30" height="30" class="d-inline-block align-text-top">
       Rick and Morty API
     </a>
-    <form class="d-flex">
-      <input class="form-control me-2" type="search" placeholder="" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Buscar</button>
-    </form>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.php">Capitulos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Personajes.php">Personajes</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+      </form>
+    </div>
   </div>
 </nav>
 
-
 <!-- detalle arriba -->
-
+<center>
 <div class="cont-detail">
   <div>
     <img class="img-fluid" src="https://es.web.img3.acsta.net/pictures/18/10/31/17/34/2348073.jpg">
   </div>
-  <div>
+  <div class="infoCap">
 
     <?php
             
@@ -69,10 +84,14 @@ $api = json_decode($response,true);
     <h3><?php echo $episode ?></h3>
     <h6><?php echo $name?></h6> 
     <h6><?php echo $air_date ?></h6>
+    </center>
   </div>
 </div>
+</center>
 
 <!-- detalle personajes -->
+
+<h3 class="tituloPer">Personajes</h3>
 
 <div class="cards">
 
@@ -105,25 +124,36 @@ $api = json_decode($response,true);
         $imagen =$api['image'];
         $name = $api['name'];
         $url = $api['url'];
+        $gender = $api['gender'];
+        $species = $api['species'];
+        $status = $api['status'];
     ?>
 
-    
-
   <div class="card">
-    <img src="<?php echo $imagen ?>">
-    <div class="">
-          
-      <h5 class=""><?php echo $name ?></h5>
-      <h6 class=""><?php echo $url ?></h6>
-        
+    <div class="face front">
+      <img src="<?php echo $imagen ?>" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><?php echo $name ?></h5>
+      </div>
     </div>
-  </div><?php }?>
+
+    <div class="face back">
+      <h5><?php echo $name ?></h5>
+      <h5><?php echo $gender ?></h5>
+      <h5><?php echo $species ?></h5>
+      <h5><?php echo $status ?></h5>
+    </div>
+
+  </div>
+<?php 
+}
+?>
+
 </div>
-
-
-<footer> © Created by Santiago Gil Ramirez | 2022</footer>
  
 </div>
+
+<footer> © Created by Santiago Gil Ramirez | 2022</footer>
 
 </body>
 </html>
