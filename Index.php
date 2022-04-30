@@ -49,10 +49,10 @@ $api = json_decode($response,true);
           <a class="nav-link" href="#">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.php">Capitulos</a>
+          <a class="nav-link" href="#">Capitulos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Personajes.php">Personajes</a>
+          <a class="nav-link" href="#">Personajes</a>
         </li>
       </ul>
       <form class="d-flex">

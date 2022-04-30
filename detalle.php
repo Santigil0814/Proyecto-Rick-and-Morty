@@ -48,13 +48,13 @@ $api = json_decode($response,true);
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="">Inicio</a>
+          <a class="nav-link" href="#">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.php">Capitulos</a>
+          <a class="nav-link" href="#">Capitulos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Personajes.php">Personajes</a>
+          <a class="nav-link" href="#">Personajes</a>
         </li>
       </ul>
       <form class="d-flex">
@@ -72,7 +72,6 @@ $api = json_decode($response,true);
     <img class="img-fluid" src="https://es.web.img3.acsta.net/pictures/18/10/31/17/34/2348073.jpg">
   </div>
   <div class="infoCap">
-
     <?php
             
       $name = $api['name'];
@@ -80,14 +79,17 @@ $api = json_decode($response,true);
       $air_date = $api['air_date'];
 
     ?>
-
+    
     <h3><?php echo $episode ?></h3>
     <h6><?php echo $name?></h6> 
     <h6><?php echo $air_date ?></h6>
-    </center>
   </div>
 </div>
-</center>
+</center> 
+
+<center>
+    <button class="btn btn-primary" onClick='window.history.back()'>Volver</button>
+</center> 
 
 <!-- detalle personajes -->
 
@@ -130,20 +132,18 @@ $api = json_decode($response,true);
     ?>
 
   <div class="card">
-    <div class="face front">
+    <div>
       <img src="<?php echo $imagen ?>" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title"><?php echo $name ?></h5>
       </div>
+      <form action="Personajes.php" method="post">
+        <input style="display: none;" name="url" value="<?php echo $url ?>">
+        <center>
+          <button class="btn btn-primary">Ver más</button>
+        </center>
+      </form>
     </div>
-
-    <div class="face back">
-      <h5><?php echo $name ?></h5>
-      <h5><?php echo $gender ?></h5>
-      <h5><?php echo $species ?></h5>
-      <h5><?php echo $status ?></h5>
-    </div>
-
   </div>
 <?php 
 }

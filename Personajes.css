@@ -4,6 +4,47 @@
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.tituloPer {
-    text-align: center;
+.fot {
+  width: 500px;
+}
+
+.cards {
+  margin: 0%;
+  padding: 0%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+}
+
+.card {
+  padding: 10px;
+  width: 250px;
+  margin: 15px 50px 15px 50px;
+  -webkit-box-shadow: 6px 6px 19px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 6px 19px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 6px 19px -4px rgba(0, 0, 0, 0.75);
+}
+
+.title {
+  text-align: center;
+}
+
+.tarjeta {
+  margin: 20px 0 20px 0;
+  display: flex;
+  flex-direction:row;
+  border: 1px solid black;
+  width: 700px;
+  padding: 15px;
+  justify-content:space-around;
+  justify-items: center;
+}
+
+.derecha {
+  padding: 0 10px 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
